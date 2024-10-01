@@ -1,6 +1,7 @@
 # mern-ecommerce-2
 
-![Screenshot 2024-09-29 000555](https://github.com/user-attachments/assets/7c177bbf-572f-474b-b962-e60214220b38)
+![fabrica1](https://github.com/user-attachments/assets/96b160a8-cb4e-47fd-bafd-cc34e94756fe)
+
 
 ![Screenshot 2024-09-30 220907](https://github.com/user-attachments/assets/01525039-2707-44f2-87da-472170a58ddc)
 
