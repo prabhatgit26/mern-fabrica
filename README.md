@@ -1,5 +1,6 @@
 # mern-ecommerce-2
 
+Home Page
 ![fabrica1](https://github.com/user-attachments/assets/96b160a8-cb4e-47fd-bafd-cc34e94756fe)
 
 
