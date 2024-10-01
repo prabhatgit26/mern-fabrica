@@ -7,3 +7,4 @@
 
 
 ![Screenshot 2024-09-30 221140](https://github.com/user-attachments/assets/f8b69589-2a01-4bfb-aa3a-0e0886d76292)
+![fabrica2](https://github.com/user-attachments/assets/6e7c67f3-9ec2-4b15-84bb-b324e27935a0)
