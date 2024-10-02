@@ -1,7 +1,7 @@
 # mern-FABRICA :
 
 
- Welcome to Fabrica, your ultimate fashion destination! Discover a world of style, where trend meets elegance. From chic everyday wear to statement pieces, Fabrica offers a carefully curated collection designed to make you look and feel fabulous. Elevate your wardrobe with the latest fashion essentials, all at your fingertips.
+ Fabrica is a cutting-edge e-commerce platform designed for the fashion industry, built using the MERN stack (MongoDB, Express, React, Node.js) for full-stack functionality. The frontend is powered by React and Vite, ensuring a smooth and responsive user interface with fast load times. The backend is managed through Node.js and Express for efficient server-side operations, while MongoDB provides a robust database solution for managing product catalogs, user data, and orders. Secure authentication, dynamic product filtering, and seamless payment integration make Fabrica a scalable and modern web app, delivering an exceptional shopping experience
 
 
 
