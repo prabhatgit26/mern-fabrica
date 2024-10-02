@@ -19,3 +19,9 @@ Individual Product Component :
 Add To Cart Component :
 
 ![fabrica3](https://github.com/user-attachments/assets/2ad302fa-663a-400c-884e-e435e45bce3f)
+
+User Sign Up Page :
+![fabrica4](https://github.com/user-attachments/assets/9b971686-65d7-48b6-8342-2f065d33a270)
+
+User Login Page :
+![fabrica5](https://github.com/user-attachments/assets/675d2cb5-9cc3-4575-a354-0cb8c6c7be68)
