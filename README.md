@@ -1,4 +1,4 @@
-# mern-ecommerce-2
+# mern-FABRICA : Welcome to Fabrica, your ultimate fashion destination! Discover a world of style, where trend meets elegance. From chic everyday wear to statement pieces, Fabrica offers a carefully curated collection designed to make you look and feel fabulous. Elevate your wardrobe with the latest fashion essentials, all at your fingertips.
 
 Home Page :
 
