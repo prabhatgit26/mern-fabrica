@@ -11,7 +11,7 @@ const Footer = () => {
             Your satisfaction is our top priority. Explore the latest trends and
             discover exceptional products tailored just for you. Enjoy secure
             shopping with fast delivery and hassle-free returns, ensuring a
-            seamless experience every time.
+            seamless experience every time with <b style={{color:"sienna"}}>Fabrica</b>.
           </p>
         </div>
 
@@ -34,7 +34,6 @@ const Footer = () => {
         </div>
 
       </div>
-
 
       <div>
             <hr />
