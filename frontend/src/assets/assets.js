@@ -56,6 +56,7 @@ import p_img52 from './p_img52.png'
 
 
 import logo from './logo.png'
+import logo2 from './logo2.png'
 import logoo from './logoo.png'
 import logooo from './logooo.png'
 import hero_img from './hero_img.png'
@@ -80,6 +81,7 @@ export const assets = {
     logoo,
     logooo,
     logo,
+    logo2,
     hero_img,
     cart_icon,
     dropdown_icon,
