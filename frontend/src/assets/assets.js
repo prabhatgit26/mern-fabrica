@@ -81,7 +81,7 @@ export const assets = {
     logoo,
     logooo,
     logo,
-    logo2,
+    logo2,  
     hero_img,
     cart_icon,
     dropdown_icon,

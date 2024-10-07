@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between py-5 font-medium">
-      <Link to='/'><img src={assets.logo2} className="w-36" alt="forever" /></Link>
+      <Link to='/' title="Fabrica Home Page"><img src={assets.logo2} className="w-36" alt="forever" /></Link>
 
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">

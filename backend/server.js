@@ -4,6 +4,8 @@ import 'dotenv/config';
 import connectDB from './config/mongodb.js';
 import connectCloudinary from './config/cloudinary.js';
 import userRouter from './routes/userRoute.js';
+import productRouter from "./routes/productRoute.js";
+
 
 // App Config
 const app = express();
@@ -17,6 +19,7 @@ app.use(cors())
 
 // API Endpoints
 app.use('/api/user',userRouter)
+app.use('/api/product',productRouter)
 
 app.get('/', (req,res)=>{
     res.send("API is Working Properly || The API is active and functioning as expected.");
@@ -24,3 +27,5 @@ app.get('/', (req,res)=>{
 
 
 app.listen(port, ()=> console.log("\nServer Started on PORT : "+ port));
+
+
