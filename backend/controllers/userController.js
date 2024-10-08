@@ -54,7 +54,7 @@ const registerUser = async (req,res) => {
         }
 
         if (password.length < 8) {
-            return res.json({success:false, message:"Password must be 8 character or enter strong password."})
+            return res.json({success:false, message:"Enter strong password (Password must be 8 characters)."})
         }
 
         // Hashing user password for that generate salt function
@@ -85,7 +85,23 @@ const registerUser = async (req,res) => {
 
 // Route for admin login
 const adminLogin = async (req,res) => {
+    try {
+        
+        const { email, password } = req.body
 
+        if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
+            const token = jwt.sign(email+password,process.env.JWT_SECRET)
+            res.json({success:true, message:"Admin Logged In successfully.",token})
+        }
+        else{
+            res.json({success:false, message:"Invalid Credentials."})
+        }
+
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, message:error.message})
+
+    }
 }
 
 
