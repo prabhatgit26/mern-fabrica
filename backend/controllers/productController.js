@@ -1,6 +1,74 @@
 import { v2 as cloudinary } from "cloudinary";
 import productModel from "../models/productModel.js";
 
+// Function for adding bulk products
+const addBulkProducts = async (req, res) => {
+    try {
+        // Extract products array from the request body
+        const productsArray = req.body.products; // assuming you send data as { products: [...] }
+        
+        // Check if it's an array and has products
+        if (!Array.isArray(productsArray) || productsArray.length === 0) {
+            return res.status(400).json({ success: false, message: "No products found in request" });
+        }
+
+        // Iterate over each product in the productsArray
+        let allProductData = await Promise.all(
+            productsArray.map(async (product) => {
+                const { name, description, price, category, subCategory, sizes, bestseller, files } = product;
+
+                // Extract image files (assuming they're sent along with product data)
+                const image1 = files?.image1 && files.image1[0];
+                const image2 = files?.image2 && files.image2[0];
+                const image3 = files?.image3 && files.image3[0];
+                const image4 = files?.image4 && files.image4[0];
+
+                // Save images in an array
+                const images = [image1, image2, image3, image4].filter((item) => item !== undefined);
+
+                // Upload images to Cloudinary
+                let imagesUrl = await Promise.all(
+                    images.map(async (item) => {
+                        let result = await cloudinary.uploader.upload(item.path, { resource_type: 'image' });
+                        return result.secure_url;
+                    })
+                );
+
+                // Create product data for each item
+                const productData = {
+                    name,
+                    description,
+                    category,
+                    price: Number(price),
+                    subCategory,
+                    bestseller: bestseller === "true" ? true : false,
+                    sizes: JSON.parse(sizes), // Assuming sizes come in JSON string form
+                    image: imagesUrl,
+                    date: Date.now(),
+                };
+
+                // Return product data for bulk saving later
+                return productData;
+            })
+        );
+
+        // Insert all products into the database in bulk
+        const products = await productModel.insertMany(allProductData);
+
+        // Response after successful bulk addition
+        res.json({ success: true, message: "All Products Added Successfully.", products });
+
+    } catch (error) {
+        res.json({ success: false, message: error.message });
+        console.log(error);
+    }
+};
+
+
+
+
+
+
 // Function for add product
 const addProduct = async (req,res) => {
     try {
@@ -98,4 +166,4 @@ const singleProduct = async (req,res) => {
 
 }
 
-export { listProducts, addProduct, removeProduct, singleProduct };
+export { addBulkProducts,listProducts, addProduct, removeProduct, singleProduct };
