@@ -29,7 +29,7 @@ const App = () => {
         <>
           <Navbar setToken={setToken}/>
           <hr />
-          <div className="flex w-full">
+          <div className="flex w-full bg-gray-50">
             <Sidebar />
             <div className="w-[70%] mx-auto ml-[max(5vw,25px)] my-8 text-gray-600 text-base">
               <Routes>

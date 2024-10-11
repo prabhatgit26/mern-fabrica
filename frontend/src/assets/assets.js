@@ -56,6 +56,8 @@ import p_img52 from './p_img52.png'
 
 
 import logo from './logo.png'
+import fitwell from './fitwell.png'
+import fitwell2 from './fitwell2.png'
 import logo2 from './logo2.png'
 import logoo from './logoo.png'
 import logooo from './logooo.png'
@@ -79,6 +81,8 @@ import cross_icon from './cross_icon.png'
 
 export const assets = {
     logoo,
+    fitwell,
+    fitwell2,
     logooo,
     logo,
     logo2,  
