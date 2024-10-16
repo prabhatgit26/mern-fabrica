@@ -12,7 +12,7 @@ const BestSeller = () => {
     console.log(products);
     setBestSeller(bestProduct.slice(0,5));
     console.log(bestProduct)
-  },[]);
+  },[products]);
 
   
   

@@ -41,8 +41,8 @@ const addBulkProducts = async (req, res) => {
                     category,
                     price: Number(price),
                     subCategory,
-                    bestseller: bestseller === "true" ? true : false,
-                    sizes: JSON.parse(sizes), // Assuming sizes come in JSON string form
+                    bestseller: bestseller === "true", // Convert string to boolean
+                    sizes: JSON.parse(sizes), // Assuming sizes are sent as a JSON string
                     image: imagesUrl,
                     date: Date.now(),
                 };
@@ -57,7 +57,7 @@ const addBulkProducts = async (req, res) => {
 
         // Response after successful bulk addition
         res.json({ success: true, message: "All Products Added Successfully.", products });
-
+        
     } catch (error) {
         res.json({ success: false, message: error.message });
         console.log(error);
