@@ -51,7 +51,8 @@ const List = ({token}) => {
 
   return (
     <>
-      <p className='mb-2 text-[20px]'>All Products List</p>
+      <p className='mb-2 text-[20px]'>List of All Products <span className='ml-[796px] text-[17px] text-red-600'>TOTAL :<b className='text-red-600'> ({list.length})</b></span></p>
+      
       <div className='flex flex-col gap-2'>
 
         {/* ------- List Table Title -------- */}
